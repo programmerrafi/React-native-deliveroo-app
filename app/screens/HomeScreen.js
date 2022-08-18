@@ -75,23 +75,25 @@ const HomeScreen = () => {
         </View>
 
         {/* Body */}
-        <ScrollView
-          className="bg-gray-100"
-          contentContainerStyle={{ paddingBottom: 100 }}
-        >
-          {/* Categories */}
-          <Categories />
+        <View className="pb-[250px]">
+          <ScrollView
+            className="bg-gray-100"
+            contentContainerStyle={{ paddingBottom: 100 }}
+          >
+            {/* Categories */}
+            <Categories />
 
-          {/* Features Rows */}
-          {featuredCategories?.map((category) => (
-            <FeatureRow
-              key={category._id}
-              id={category._id}
-              title={category.name}
-              description={category.short_description}
-            />
-          ))}
-        </ScrollView>
+            {/* Features Rows */}
+            {featuredCategories?.map((category) => (
+              <FeatureRow
+                key={category._id}
+                id={category._id}
+                title={category.name}
+                description={category.short_description}
+              />
+            ))}
+          </ScrollView>
+        </View>
       </View>
     </SafeAreaWrapper>
   );
